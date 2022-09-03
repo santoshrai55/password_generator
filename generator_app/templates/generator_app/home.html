@@ -1,0 +1,62 @@
+{% extends "base.html" %} {% block header-footer %}
+<div class="p-5 mb-4 bg-light rounded-3">
+  <div class="container-fluid py-5">
+    <h1 class="text-success mt-5 display-5">Password Generator</h1>
+    <form action="{% url 'password' %}" method="">
+      <select name="length" id="" class="form-select mb-4">
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12" selected>12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+      </select>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          name="uppercase"
+          id="uppercase"
+          checked
+        />
+        <label class="form-check-label" for="uppercase"> Uppercase </label>
+      </div>
+      <div class="form-check">
+        <input
+          name="numbers"
+          class="form-check-input"
+          type="checkbox"
+          value="numbers"
+          id="numbers"
+          checked
+        />
+        <label class="form-check-label" for="numbers"> Numbers </label>
+      </div>
+      <div class="form-check">
+        <input
+          name="special"
+          class="form-check-input"
+          type="checkbox"
+          value="special"
+          id="special"
+          checked
+        />
+        <label class="form-check-label" for="special">
+          Special Characters
+        </label>
+      </div>
+
+      <input
+        class="btn btn-success mt-5"
+        type="submit"
+        value="Generate Password"
+      />
+    </form>
+  </div>
+</div>
+
+{% endblock header-footer %}
